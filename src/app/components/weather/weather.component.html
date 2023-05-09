@@ -1,0 +1,23 @@
+<div>
+   <ul>
+      <li *ngFor="let weather of weather" class="removebullet">
+
+         <a [routerLink]="[
+         '/weather',
+            weather.name,
+            weather.springM,
+            weather.springN,
+            weather.summerM,
+            weather.summerN,
+            weather.fallM,
+            weather.fallN,
+            weather.winterM,
+            weather.winterN,
+            weather.visitFrom,
+            weather.visitTo,]">
+            {{weather.name}}
+         </a>
+
+      </li>
+   </ul>
+</div>

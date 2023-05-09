@@ -1,0 +1,32 @@
+<Form [formGroup]="techform">
+    <div class="mb-3">
+
+        <label>Name:</label>
+        <input type="text" class="form-control" formControlName="name">
+
+        <div *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']" class="alert alert-danger mb-3"
+            role="alert">
+            Please Enter Your Name.
+        </div>
+    </div>
+
+    <div class="mb-3">
+
+        <label>Age:</label>
+        <input type="number" class="form-control" formControlName="age">
+    </div>
+
+    <div class="mb-3">
+
+        <label class="form-label">Email address:</label>
+        <input type="email" class="form-control" placeholder="name@example.com" formControlName="email">
+    </div>
+
+    <div class="mb-3">
+        <label>Idea:</label>
+        <textarea class="form-control" rows="5" formControlName="idea"></textarea>
+    </div>
+
+    <button type="button" (click)="onSubmit()">Send</button>
+
+</Form>
